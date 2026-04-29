@@ -1,0 +1,51 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#bbda66;
+    margin: 0;
+}
+
+
+header {
+    background-image: url("images/Screenshot_headImg.jpg");
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    
+}
+
+.container {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto 50px;
+    background-color: white;
+}
+
+.content {
+    margin: 0 60px 20px;
+}
+
+.greybox {
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.pictures-item {
+    margin: 15px;
+    border: 1px solid #ccc;
+    width: 350px;
+    height: 350px;
+}
+
+.pictures-item img {
+  width: 100%;
+  height: 100%;
+}
