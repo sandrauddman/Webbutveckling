@@ -23,7 +23,8 @@ header {
 }
 
 .content {
-    margin: 0 60px 20px;
+    margin: 0 60px;
+   
 }
 
 .greybox {
@@ -36,6 +37,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-bottom: 30px;
+    
 }
 
 .pictures-item {
