@@ -1,4 +1,4 @@
-/*****CSS reset copied from Josh https://www.joshwcomeau.com/  *****/
+/***** CSS reset copied from Josh https://www.joshwcomeau.com/  *****/
 
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
@@ -9,13 +9,6 @@
 *:not(dialog) {
   margin: 0;
   
-}
-
-/* 3. Enable keyword animations - might not be neccessary for this site*/
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
 }
 
 body {
@@ -50,8 +43,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 /**** Space for variables****/
+
 :root {
     /* padding */
     --block-padding: 1rem 0;
@@ -81,28 +74,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-
-
-/****Own CSS *****/ 
+/**** CSS styling *****/ 
 
 
 body{
     font-family:var(--ff-main);
     background-color:#bbda66;
 }
-  
 
 
-/*****tried to put img in html to get alt text for accessibilty but failed..******/
+.container {
+    max-width: 70%;
+    margin: auto;
+    background-color: white;
+}
+
+/* tried to put img in html to get alt text for accessibilty but failed.. */
 
 .heropic{
     background-image: url("images/Screenshot_headImg.jpg");
     height: 17rem;
     background-size: cover;
 }
-/***** Added color and a specfic line height for the biggest heading, used em as line-height  ***/
-.top-heading{
+
+.main{
+    padding: var(--padding-l);
+}
+
+/* Added color and a specfic line height for the biggest heading, used em as line-height */
+.main__heading{
     font-family: var(--ff-main-heading);
     font-weight: var(--fw-main-heading);
     font-size: var(--fs-main-heading);
@@ -112,40 +112,29 @@ body{
     line-height: 1em;
  
 }
-/***can be used to put padding on h2,h3 should be smarter way to do this...**/
 
-.headings{
-    padding: var(--block-padding);
-
-    
+/* padding between elements in sections need to check! */
+section :is(h2,h3,p){
+  padding: var(--block-padding);
 }
 
-.container {
-    max-width: 70%;
-    margin: auto;
-    background-color: white;
-}
-
-.main-content {
-    padding: var(--padding-l);
    
-}
+/* styling for greybox in header */
 .greybox {
-    padding: var(--padding-m);
+    padding: var(--padding-s);
      background-color: lightgrey;
    
 }
-section{
-    padding: var(--block-padding);
-}
-.ingredienser p{
+/* trying on  a pseudo classs selector for styling small txt p*/
+section:has(ul) p{
  font-style: italic;
  font-family:var(--ff-small);
  font-size: var(--fs-small);
  font-weight: var(--fw-small) ;
- padding: var(--padding-s);
+ 
 }
 
+/* using flex to postion pictures next to eachother and be responsiv */
 
 .pictures {
     display: flex;
@@ -154,7 +143,7 @@ section{
     
 }
 
-.pictures-item {
+.pictures__item {
     margin: auto auto 2rem 0;
 
 }
