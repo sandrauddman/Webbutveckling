@@ -86,8 +86,33 @@ body{
 .container {
     max-width: 70%;
     margin: auto;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
+
+.navbar{
+  background-color: antiquewhite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem
+  ;
+  
+  
+
+
+  .navbar__list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 1,5rem;
+    padding-block: 1rem;
+    justify-content: center;
+    gap: 1rem;
+
+
+  }
+}
+
 
 /* tried to put img in html to get alt text for accessibilty but failed.. */
 
@@ -130,7 +155,7 @@ section:has(ul) p{
  font-style: italic;
  font-family:var(--ff-small);
  font-size: var(--fs-small);
- font-weight: var(--fw-small) ;
+ font-weight: var(--fw-small);
  
 }
 
@@ -140,6 +165,7 @@ section:has(ul) p{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     
 }
 
