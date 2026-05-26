@@ -20,7 +20,7 @@ body {
 /* 6. Improve media defaults */
 img, picture, video, canvas, svg {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%; /** tip from kevin powell **/ 
 }
 
 
@@ -117,9 +117,10 @@ body{
 /* tried to put img in html to get alt text for accessibilty but failed.. */
 
 .heropic{
-    background-image: url("images/Screenshot_headImg.jpg");
-    height: 17rem;
-    background-size: cover;
+
+    min-block-size: 10%;
+    object-fit: cover;
+    
 }
 
 .main{
@@ -137,21 +138,22 @@ body{
     line-height: 1em;
  
 }
-
-/* padding between elements in sections need to check! */
-section :is(h2,h3,p){
-  padding: var(--block-padding);
-}
-
-   
 /* styling for greybox in header */
 .greybox {
     padding: var(--padding-s);
      background-color: lightgrey;
    
 }
+
+/* padding between elements using psuedo class */
+ :is(h2,p){
+  padding: var(--block-padding);
+}
+
+   
+
 /* trying on  a pseudo classs selector for styling small txt p*/
-section:has(ul) p{
+.section:has(ul) p{
  font-style: italic;
  font-family:var(--ff-small);
  font-size: var(--fs-small);
@@ -161,7 +163,7 @@ section:has(ul) p{
 
 /* using flex to postion pictures next to eachother and be responsiv */
 
-.pictures {
+.pictures {  
     display: flex;
     flex-wrap: wrap;
     align-items: center;
