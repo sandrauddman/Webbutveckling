@@ -85,16 +85,20 @@ body{
 
 .container {
     max-width: 70%;
-    margin: auto auto 5% auto; /* added margin on the bottom */
+    margin-inline: auto; 
+    margin-block-end: 5%; /* added margin on the bottom  with logical properties*/
     background-color: white;
 }
 
 /* hero pic still have problems to make it responsiv. at full width it still have with space..*/
 
 .heropic{
-
-    min-block-size: 10%;
-    object-fit: cover;
+    
+    /*background-image: url("images/Screenshot_headImg.jpg");*/
+    min-block-size: 13rem;
+    
+    width: 100%;
+    
     
 }
 
@@ -141,14 +145,14 @@ body{
 .pictures {  
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     gap: 5%;
+   
   
     
 }
 
 .pictures__item {
-    margin: auto auto 2rem 0;
+    margin-block-end: 1rem;
 
 }
 
