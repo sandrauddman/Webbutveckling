@@ -57,6 +57,16 @@ h1, h2, h3, h4, h5, h6 {
     
     --lh-normal: 1.5;
 
+    /* Colors */
+
+    --color-white: white;
+    --color-lime-cream: #ecf39e;
+    --color-palm-green: #90a955;
+    --color-fern-green: #4f772d;
+    --color-hunter-green: #31572c;
+    --color-evergreen: #132a13;
+    
+    
     /* font family */
     --ff-main-heading: "Spicy Rice", serif;
     --ff-main: Arial, Helvetica, sans-serif;
@@ -79,29 +89,17 @@ h1, h2, h3, h4, h5, h6 {
 
 body{
     font-family:var(--ff-main);
-    background-color:#bbda66;
+    background-color:var(--color-palm-green);
 }
 
-
-.container {
-    max-width: 70%;
-    margin-inline: auto; 
-    margin-block-end: 5%; /* added margin on the bottom  with logical properties*/
-    background-color: white;
-}
-
-.navbar{
-  background-color: antiquewhite;
+.topbar{
+  background-color: var(--color-lime-cream);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 1rem
-  ;
+  padding-inline: 1rem;
   
-  
-
-
   .navbar__list{
     display: flex;
     flex-wrap: wrap;
@@ -109,9 +107,17 @@ body{
     padding-block: 1rem;
     justify-content: center;
     gap: 1rem;
+    list-style-type: none;
 
 
   }
+}
+
+.container {
+    max-width: 70%;
+    margin-inline: auto; 
+    margin-block-end: 5%; /* added margin on the bottom  with logical properties*/
+    background-color:var(--color-white);
 }
 
 
@@ -127,8 +133,8 @@ body{
     
 }
 
-.main{
-    padding: var(--padding-l);
+.main__content{
+  padding: var(--padding-l);
 }
 
 /* Added color and a specfic line height for the biggest heading, used em as line-height */
@@ -138,7 +144,7 @@ body{
     font-size: var(--fs-main-heading);
     
     padding: var(--block-padding);
-    color: rgb(6, 69, 6);
+    color:var(--color-hunter-green);
     line-height: 1em;
  
 }
