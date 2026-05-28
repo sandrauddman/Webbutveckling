@@ -1,41 +1,54 @@
 /***** CSS reset copied from Josh https://www.joshwcomeau.com/  *****/
 
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 /* 2. Remove default margin */
 *:not(dialog) {
   margin: 0;
-  
 }
 
 body {
   /* 4. Increase line-height */
   line-height: var(--lh-normal);
-  
 }
 
-a{
+a {
   text-decoration: none;
-
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
-  max-inline-size: 100%; /** tip from kevin powell **/ 
+  max-inline-size: 100%;
+  /** tip from kevin powell **/
 }
 
 
 /* 7. Inherit fonts for form controls might not be neccessary for this site*/
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -43,7 +56,13 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
@@ -52,236 +71,224 @@ h1, h2, h3, h4, h5, h6 {
 /**** Space for variables****/
 
 :root {
-    /* padding */
-    --block-padding: 1rem 0;
-    --paddding-xs: 0,5rem;
-    --padding-s: 0.8rem;
-    --padding-m: 1rem;
-    --padding-l: 2rem; 
+  /* padding */
+  --block-padding: 1rem 0;
+  --paddding-xs: 0, 5rem;
+  --padding-s: 0.8rem;
+  --padding-m: 1rem;
+  --padding-l: 2rem;
+  --padding-button: 0.2em 0.5em;
 
 
-    /* line-heights */
-    
-    --lh-normal: 1.5;
+  /* line-heights */
 
-    /* Colors */
+  --lh-normal: 1.5;
 
-    --color-white: white;
-    --color-lime-cream: #ecf39e;
-    --color-light-green-hover: #abc76c;
-    --color-palm-green: #90a955;
-    --color-fern-green: #4f772d;
-    --color-hunter-green: #31572c;
-    --color-evergreen: #132a13;
-    
-    
-    /* font family */
-    --ff-main-heading: "Spicy Rice", serif;
-    --ff-main: "Segoe UI",Arial, Helvetica, sans-serif;
-    --ff-small: Georgia, 'Times New Roman', Times, serif;
+  /* Colors */
 
-    /* font size */
-    --fs-main-heading: 3rem;
-    --fs-small: 0.8rem;
+  --color-white: white;
+  --color-lime-cream: #ecf39e;
+  --color-light-green-hover: #abc76c;
+  --color-palm-green: #90a955;
+  --color-fern-green: #4f772d;
+  --color-hunter-green: #31572c;
+  --color-evergreen: #132a13;
 
 
-    /* font weigth */
-    --fw-main-heading: 400;
-    --fw-small: 200;
+  /* font family */
+  --ff-main-heading: "Spicy Rice", serif;
+  --ff-main: "Segoe UI", Arial, Helvetica, sans-serif;
+  --ff-small: Georgia, 'Times New Roman', Times, serif;
+
+  /* font size */
+  --fs-main-heading: 3rem;
+  --fs-small: 0.8rem;
+
+
+  /* font weigth */
+  --fw-main-heading: 400;
+  --fw-small: 200;
 
 }
 
 
-/**** CSS styling *****/ 
+/**** CSS styling *****/
 
 
-body{
-    font-family:var(--ff-main);
-    background-color:var(--color-palm-green);
+body {
+  font-family: var(--ff-main);
+  background-color: var(--color-palm-green);
 }
 
-
-
-.navbar__top{
+.navbar__top {
   position: sticky;
   top: 0;
 
-  background-color:var(--color-white);
+  background-color: var(--color-white);
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  padding-inline: 0.8rem;
-  border-bottom: solid var(--color-fern-green) 1px;
   
-  
-  .navbar__list{
+  padding: var(--padding-m);
+  border-block-end: solid var(--color-fern-green) 1px; /* logical prop*/
+
+
+  .navbar__list {
     display: flex;
     flex-wrap: wrap;
-    padding-inline: 1,5rem;
-    padding-block: 1rem;
     justify-content: center;
     gap: 1rem;
+    
     list-style-type: none;
-
-
-   
-}
+  }
 
 }
 
- .navbar__list__item{
-      padding: var(--padding-m); /* making them big enough to click */
-      color: var(--color-evergreen);
-      border-radius: 10%;
-      font-size: large;
-      
+.navbar__list__item {
+  padding: var(--padding-m); /* making them big enough to click */
+  color: var(--color-evergreen);
+  border-radius: 10%;
+  font-size: large;
+}
 
-   
-   
-    }
-    .navbar__list__item:hover{
-      background-color: var(--color-lime-cream);
+.navbar__list__item:hover {
+  background-color: var(--color-lime-cream);
+}
 
-  }
-  button:hover{
-    cursor: pointer;
-    background-color: var(--color-light-green-hover);
-  }
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-light-green-hover);
+}
 
-.navbar__button{
-    color:var(--color-evergreen);
-    background-color: var(--color-palm-green);
-    border-radius: 10%;
-    padding: 0.5rem 2%;
-    border: none;
+.navbar__button {
+  color: var(--color-evergreen);
+  background-color: var(--color-palm-green);
+
+  padding: var(--padding-button);
+  
+  border-radius: 10%;
+  border: 1px solid var(--color-evergreen);
 }
 
 /**************** recept sidan *****************/
 .container {
-    max-width: 70%;
-    margin-inline: auto; 
-    margin-block-end: 5%; /* added margin on the bottom  with logical properties*/
-    background-color:var(--color-white);
+  max-inline-size: 70%;  /* logical prop*/
+  margin-inline: auto;
+  margin-block-end: 5%;  /* added margin on the bottom  with logical properties*/
+  background-color: var(--color-white);
 }
 
 
 /* I have problem setting a fixed height for the img..  */
 
-.heropic{
-    
-    object-fit: cover;
-    
-    
+.heropic {
+  object-fit: cover;
 }
 
-.main__content{
+.main__content {
   padding: var(--padding-l);
 }
 
 /* Added color and a specfic line height for the biggest heading, used em as line-height */
-.main__heading{
-    font-family: var(--ff-main-heading);
-    font-weight: var(--fw-main-heading);
-    font-size: var(--fs-main-heading);
-    
-    padding: var(--block-padding);
-    color:var(--color-hunter-green);
-    line-height: 1em;
- 
+.main__heading {
+  font-family: var(--ff-main-heading);
+  font-weight: var(--fw-main-heading);
+  font-size: var(--fs-main-heading);
+
+  padding: var(--block-padding);
+  color: var(--color-hunter-green);
+  line-height: 1em;
+
 }
+
 /* styling for greybox in header */
 .greybox {
-    padding: var(--padding-s);
-     background-color: lightgrey;
-   
+  padding: var(--padding-s);
+  background-color: lightgrey;
+
 }
 
 /* padding between elements using psuedo class */
- :is(h2,p){
+:is(h2, p) {
   padding: var(--block-padding);
 }
 
-   
+
 
 /* trying on  a pseudo classs selector for styling small txt p*/
-.section:has(ul) p{
- font-style: italic;
- font-family:var(--ff-small);
- font-size: var(--fs-small);
- font-weight: var(--fw-small);
- 
+.section:has(ul) p {
+  font-style: italic;
+  font-family: var(--ff-small);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-small);
+
 }
 
-.ingredient__list{
-  padding-inline-start: 40px;
-}
+
 
 /* using flex to postion pictures next to eachother and be responsiv */
 
-.pictures {  
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5%;
-   
-  
-    
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5% 5%;
 }
 
 .pictures__item {
-    margin-block-end: 1rem;
-
+   margin-block-end: 1rem; /* logical prop*/
 }
 
 
 /************* "hem" sidan **********/
 
-.hero-text{
- padding: var(--padding-s);   
+.hero-text {
+  padding: var(--padding-s);
 }
 
 
-.cards{
+.cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  
+  justify-content: space-evenly; /* lekt med lite olika här*/
+
   padding: var(--padding-m);
   gap: 2rem;
-  
+
 
 }
-.card{
+
+.card {
   background-color: var(--color-white);
-  
+
   border-radius: 30px;
- 
+
   max-inline-size: 35ch;
   border: 1px solid var(--color-hunter-green);
 
-  .card__content{
-  padding: var(--padding-m);
-  padding-block-end: 2rem;
-  & > h2{
-  padding:0%;
-  
+  .card__content {
+    padding: var(--padding-m);
+    padding-block-end: 2rem;
+
+    &>h2 {
+      padding: 0%;
+
+    }
+
   }
-  
-}
-.card__image{
-  border-start-end-radius: 30px;
-  border-start-start-radius: 30px;
-}
-a.button{
-  border: 1px solid rgb(126, 125, 125);
-  background-color:rgb(209, 209, 213);
-  padding: 0.2em 0.5em;
-  color: black;
-  border-radius: 5%;
-  
 
-}
-}
+  .card__image {
+    border-start-end-radius: 30px;
+    border-start-start-radius: 30px;
+  }
+
+  a.button {
+    border: 1px solid rgb(126, 125, 125);
+    background-color: rgb(209, 209, 213);
+    padding: 0.2em 0.5em;
+    color: black;
+    border-radius: 5%;
 
 
+  }
+}
