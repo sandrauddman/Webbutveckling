@@ -12,9 +12,7 @@
 </head>
 
 <body>
-
-    <header>
-        <div class="topbar">
+        <div class="navbar__top">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 id="Seasoning-Food--Streamline-Ultimate" height="30" width="30">
                 <desc>
@@ -44,14 +42,14 @@
             </svg>
             <nav aria-label="Main Navigation">
                 <ul class="navbar__list" role="list">
-                    <li><a href="#">Recept</a></li>
-                    <li><a href="about.html">Om oss</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a class="navbar__list__item" href="home.html">Recept</a></li>
+                    <li><a class="navbar__list__item" href="about.html">Om oss</a></li>
+                    <li><a class="navbar__list__item" href="contact.html">Kontakt</a></li>
                 </ul>
             </nav>
-            <button>Logga in</button>
+            <button class="navbar__button" href="#">Logga in</button>
         </div>
-    </header>
+
 
     <main class="container">
         <header>
@@ -70,7 +68,7 @@
         <section class="section">
             <h2 class="section__heading">Ingredienser</h2>
             <p>för 2 portioner</p>
-            <ul>
+            <ul class="ingredient__list">
                 <li>1 avocado</li>
                 <li>200 g riven tofu</li>
                 <li>1/2 gurka</li>
