@@ -230,13 +230,9 @@ button:hover {
 /* using flex to postion pictures next to eachother and be responsiv */
 
 .pictures {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5% 5%;
-}
-
-.pictures__item {
-   margin-block-end: 1rem; /* logical prop*/
+  display: grid;
+  gap: 1rem;;
+  grid-template-columns: repeat(auto-fit, minmax(min(350px,100%), 1fr));
 }
 
 
