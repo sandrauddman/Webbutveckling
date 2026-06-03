@@ -227,7 +227,7 @@ button:hover {
 
 
 
-/* using flex to postion pictures next to eachother and be responsiv */
+/* Changed to grid */
 
 .pictures {
   display: grid;
@@ -244,10 +244,15 @@ button:hover {
 
 
 .cards {
+
+  /*
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; /* lekt med lite olika här*/
-
+  justify-content: space-evenly; lekt med lite olika här
+  changed to grid here.
+  */
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(250px,100%),1fr));
   padding: var(--padding-m);
   gap: 2rem;
 
