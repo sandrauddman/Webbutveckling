@@ -293,3 +293,39 @@ button:hover {
 
   }
 }
+
+
+/** logging in page **/
+
+.login-heading{
+  color: var(--color-evergreen);
+}
+
+.form{
+  display:grid;
+  gap:.5rem;
+  margin: 10% auto;
+  padding: 2rem;
+  max-width: 70%;   /* might wanna make more responsive */
+  background-color: antiquewhite;
+  border-radius: 5%; 
+}
+
+.form__group{
+  display: grid;
+  padding: 0.2rem;
+  
+  & input, & select{
+    padding: 0.5rem; 
+  }
+}
+
+input:not([type="checkbox"]){
+  width: 100%;
+}
+  
+
+.form button{
+  justify-self: start;
+}
+
