@@ -86,13 +86,17 @@ h6 {
 
   /* Colors */
 
-  --color-white: white;
+  --color-white: oklch(100% 0.00011 271.152);
+  --color-btn-border:oklch(59.058% 0.00119 14.096);
+  --color-btn-backgr:oklch(86.186% 0.00556 286.026);
+  --color-btn-hover: oklch(from var(--color-btn-backgr) l c calc(1+0.1));
   --color-lime-cream: #ecf39e;
   --color-light-green-hover: #abc76c;
-  --color-palm-green: #90a955;
+  --color-palm-green: oklch(69.676% 0.11431 123.061);
   --color-fern-green: #4f772d;
   --color-hunter-green: #31572c;
   --color-evergreen: #132a13;
+  --color-palm-green-ligth: oklch(from var(--color-palm-green) calc(1 + 0.1) c h);
 
 
   /* font family */
@@ -205,7 +209,7 @@ button:hover {
 /* styling for greybox in header */
 .greybox {
   padding: var(--padding-s);
-  background-color: lightgrey;
+  background-color: var(--color-btn-backgr);
 
 }
 
@@ -284,8 +288,8 @@ button:hover {
   }
 
   a.button {
-    border: 1px solid rgb(126, 125, 125);
-    background-color: rgb(209, 209, 213);
+    border: 1px solid  var(--color-btn-border);
+    background-color: var(--color-btn-backgr);
     padding: 0.2em 0.5em;
     color: black;
     border-radius: 5%;
@@ -293,7 +297,9 @@ button:hover {
 
   }
 }
-
+a.button:hover{
+  background-color: var(--color-btn-hover);
+}
 
 /** logging in page **/
 
